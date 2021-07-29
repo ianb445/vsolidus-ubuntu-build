@@ -26,7 +26,7 @@ Find the line: 'cd "${BDB_PREFIX}/${BDB_VERSION}/" '
 paste the following below that:
 
 '# Download the latest config.guess and config.sub files
-<<p>>
+<p>
 curl https://git.savannah.gnu.org/cgit/config.git/plain/config.guess > ./dist/config.guess
 <p>
 curl https://git.savannah.gnu.org/cgit/config.git/plain/config.sub > ./dist/config.sub
