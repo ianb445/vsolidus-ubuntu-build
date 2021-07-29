@@ -9,7 +9,7 @@ In order to build on a Raspberry PI you need to make a few changes to the Berkle
 
 The issue with building the DB on a PI is that the version of the build does not recognise the architecture. This is controlled by two files:
 
-config.guess and config.sub, these two files need to be replaced with the latest versions and the  ./contrib/install_db4.sh needs to be modified to not overwrite the
+./db4/db-4.8.30.NC/dist/config.guess and ./db4/db-4.8.30.NC/dist/config.sub, these two files need to be replaced with the latest versions and the  ./contrib/install_db4.sh needs to be modified to not overwrite the
 updated config.guess and sub files. Basically, the install_db4.sh file, fetches the DB4 bundle from Oracle, untar's it to the ./db4 folder each time it is run and
 it is this process which continously loads the old versions of .guess and .sub
 
