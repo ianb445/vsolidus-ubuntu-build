@@ -33,7 +33,7 @@ curl https://git.savannah.gnu.org/cgit/config.git/plain/config.sub > ./dist/conf
 <p>
 chmod +x ./dist/config.*
 
-Save and exit and then run "./contrib/install_db4.sh `pwd`"
+Save and exit and then run ./contrib/install_db4.sh ``pwd``
 
 
 
