@@ -27,7 +27,9 @@ paste the following below that:
 
 '# Download the latest config.guess and config.sub files
 curl https://git.savannah.gnu.org/cgit/config.git/plain/config.guess > ./dist/config.guess
+
 curl https://git.savannah.gnu.org/cgit/config.git/plain/config.sub > ./dist/config.sub
+
 chmod +x ./dist/config.*
 
 Save and exit and then run "./contrib/install_db4.sh `pwd`"
