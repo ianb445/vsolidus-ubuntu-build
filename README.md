@@ -19,29 +19,18 @@ install_db4.sh is not executable, so you need to change that. As per the script,
 
 chmod +x $(find ./ -name '*.sh) # which searches for all .sh files under the current path and makes them executable
 
-The latest versions are found at and are included in this repo as at the 29/07/21:
+nano ./contrib/install_db4.sh
 
-config.guess: 
-http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD
+Find the line: 'cd "${BDB_PREFIX}/${BDB_VERSION}/" '
 
-config.sub: 
-http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD
+paste the following below that:
 
-We need to stop the untaring of the file and then replace the two files with the latest versions:
+'# Download the latest config.guess and config.sub files
+curl https://git.savannah.gnu.org/cgit/config.git/plain/config.guess > ./dist/config.guess
+curl https://git.savannah.gnu.org/cgit/config.git/plain/config.sub > ./dist/config.sub
+chmod +x ./dist/config.*
 
-edit the install_db4.sh file and comment out the following line, by adding a hash sign in front to prevent the tarball being untarred:
-
-'# tar -xzvf ${BDB_VERSION}.tar.gz -C "$BDB_PREFIX"
-
-copy config.guess and config.sub to ./db4/db-4.8.30.NC/dist folder, overwriting the exiting files
-
-now run ./contrib/install_db4.sh `pwd` (seems to offer less grief when run with sudo), ie. sudo ./contrib/install_db4.sh `pwd`
-
-
-
-
-
-
+Save and exit and then run "./contrib/install_db4.sh `pwd`"
 
 
 
