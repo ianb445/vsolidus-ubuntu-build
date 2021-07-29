@@ -21,15 +21,15 @@ We need to stop the untaring of the file and then replace the two files with the
 
 The latest versions are found at and are included in this repo as at the 29/07/21:
 
-config.guess
+config.guess: 
 http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD
 
-config.sub
+config.sub: 
 http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD
 
 edit the install_db4.sh file and comment out the following line, by adding a hash sign in front to prevent the tarball being untarred:
 
-# tar -xzvf ${BDB_VERSION}.tar.gz -C "$BDB_PREFIX"
+'# tar -xzvf ${BDB_VERSION}.tar.gz -C "$BDB_PREFIX"
 
 copy config.guess and config.sub to ./db4/db-4.8.30.NC/dist folder, overwriting the exiting files
 
