@@ -7,6 +7,8 @@ The repo for vsolidus is found here: https://github.com/VSolidus/solidus
 
 # Ubuntu on Raspberry PI 4
 
+Solidus does not build on Raspbian, you need to use Ubuntumate (64bit)  or Ubuntu Server/Desktop (64 bit) on the PI. The compile fails on Raspbian.
+
 In order to build on a Raspberry PI a few changes to the Berkley DB build files need to be made (Only if building with a wallet, if not, follow the standard instructions).
 
 The script, contains lines in section 4 which update the the two old files config.guess and config.sub as well as a small patch to the atomic.h file required to compile on Ubuntu 19.04 
